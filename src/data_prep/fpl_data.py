@@ -11,14 +11,13 @@ def fetch_data_from_url(url, encoding="utf-8"):
     url : str
         The URL to fetch data from.
     encoding : str, optional
-        The encoding to use for reading the data (default is 'ISO-8859-1').
+        The encoding to use for reading the data (default is 'utf-8').
 
     Returns
     -------
     df : pd.DataFrame
         The DataFrame containing the fetched data.
     """
-
     df = pd.read_csv(url, encoding=encoding)
     return df
 
@@ -71,7 +70,7 @@ def process_fpl_data(df, season_year):
     # Identify players present in Gameweek 1
     players_gw1 = df[df["GW"] == 1]["name"].unique()
 
-    # ilter the main DataFrame for players who were in Gameweek 1
+    # Filter the main DataFrame for players who were in Gameweek 1
     df = df[df["name"].isin(players_gw1)]
 
     player_df = (
@@ -135,6 +134,7 @@ def process_fpl_data(df, season_year):
 
     # Remove _ from names
     player_df["name"] = player_df["name"].str.replace("_", " ")
+    player_df["name"] = player_df["name"].str.replace(r"\s\d+$", "", regex=True)
 
     return player_df
 
@@ -154,10 +154,10 @@ def get_fpl_player_data_aggregated(season_year):
         A DataFrame containing the aggregated FPL player data.
     """
     vaastav_url = f"https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/{season_year}/gws/merged_gw.csv"
-    if int(season_year[:4]) <= 2018:
-        encoding = "latin-1"
-    else:
-        encoding = "utf-8"
+    season_start = int(season_year[:4])
+
+    # Set encoding based on season start year
+    encoding = "utf-8"
 
     df = fetch_data_from_url(vaastav_url, encoding=encoding)
     player_df = process_fpl_data(df, season_year)
@@ -219,19 +219,45 @@ def merge_data(player_data, team_data_selected, season):
 
 
 def process_and_merge_season_data(start_season, end_season):
-    """Process and merge data for multiple seasons and save to a CSV file."""
-    all_seasons_data = []
-
+    """Process and save data for multiple seasons, each in its own CSV file."""
     for season in range(start_season, end_season + 1):
         player_data, team_data, current_season = fetch_data_for_season(season)
         if player_data is not None and team_data is not None:
             team_data_selected = process_team_data(team_data)
             season_data = merge_data(player_data, team_data_selected, current_season)
-            all_seasons_data.append(season_data)
 
-    if all_seasons_data:
-        combined_data = pd.concat(all_seasons_data, ignore_index=True)
-        combined_data.to_csv("data/fpl_history.csv", index=False)
-        print("CSV file 'data/fpl_history.csv' has been created successfully.")
-    else:
-        print("No data to save.")
+            encoding = "utf-8"
+
+            # Save the data to a CSV file for each season
+            file_path_player = f"data/fpl_data/{current_season}.csv"
+            season_data.to_csv(file_path_player, index=False, encoding=encoding)
+            print(f"CSV file '{file_path_player}' has been created successfully.")
+        else:
+            print(f"No data available for season {current_season}.")
+
+
+def get_season_string(season_start):
+    """
+    Generate a season string in the format YYYY-YY.
+
+    Parameters
+    ----------
+    season_start : int
+        The start year of the season. Must be a four-digit integer (e.g., 2023).
+
+    Returns
+    -------
+    season_string : str
+        The season string in the format "YYYY-YY".
+
+    Raises
+    ------
+    ValueError
+        If season_start is not a four-digit integer.
+    """
+    if not (isinstance(season_start, int) and len(str(season_start)) == 4):
+        raise ValueError("season_start must be a four-digit integer (e.g., 2023).")
+
+    season_end = season_start + 1
+    season_end_string = str(season_end)[-2:]
+    return f"{season_start}-{season_end_string}"

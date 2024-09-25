@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import time
+import os
 
 
 def fetch_html(url):
@@ -172,7 +173,7 @@ def get_season_data(url, season, metric, sleep_time=0.5):
 
 def get_all_season_data(seasons, metric, sleep_time=0.5):
     """
-    Gets data (goals or assists) for multiple seasons.
+    Gets data (goals or assists) for multiple seasons and writes them as individual CSVs.
 
     Parameters
     ----------
@@ -182,22 +183,24 @@ def get_all_season_data(seasons, metric, sleep_time=0.5):
         Either 'goals' or 'assists' to determine which data to get.
     sleep_time : float, optional
         Time to sleep between requests to avoid overloading the server (default is 0.5 seconds).
-
-    Returns
-    -------
-    pd.DataFrame
-        A DataFrame combining the data from all seasons.
     """
-    all_data = []
+    # Ensure the data directory exists
+    os.makedirs("data", exist_ok=True)
 
     for season, url in seasons.items():
         print(f"Getting {metric} data for season {season}...")
+
+        # Fetch data for the current season
         season_data = get_season_data(
             url=url, season=season, metric=metric, sleep_time=sleep_time
         )
+
         if not season_data.empty:
-            all_data.append(season_data)
+            # Define file path
+            file_path = f"data/championship_{metric}/{season}.csv"
 
-    combined_df = pd.concat(all_data, ignore_index=True)
-
-    return combined_df
+            # Save each season's data to a separate CSV file
+            season_data.to_csv(file_path, index=False)
+            print(f"Data for season {season} saved to {file_path}.")
+        else:
+            print(f"No data available for season {season}.")
