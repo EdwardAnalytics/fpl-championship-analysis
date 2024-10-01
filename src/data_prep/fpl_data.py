@@ -1,5 +1,16 @@
 import pandas as pd
 import numpy as np
+from src.tools.yaml_loader import load_yaml_file
+
+# Load parameters
+file_path = "conf/parameters.yaml"
+parameters = load_yaml_file(file_path)
+minutes_played_gameweek_min = parameters["minutes_played_gameweek_min"]
+number_gameweeks_played_min = parameters["number_gameweeks_played_min"]
+
+# Load promotion/relegation yaml
+file_path = "conf/promoted_teams_by_season.yaml"
+promoted_teams_by_season = load_yaml_file(file_path)
 
 
 def fetch_data_from_url(url, encoding="utf-8"):
@@ -74,7 +85,8 @@ def process_fpl_data(df, season_year):
     df = df[df["name"].isin(players_gw1)]
 
     player_df = (
-        df.groupby("name")
+        df[df["minutes"] > minutes_played_gameweek_min]
+        .groupby("name")
         .agg(
             total_points=("total_points", "sum"),
             goals_scored=("goals_scored", "sum"),
@@ -88,9 +100,13 @@ def process_fpl_data(df, season_year):
             penalties_saved=("penalties_saved", "sum"),
             saves=("saves", "sum"),
             bonus_points=("bonus", "sum"),
+            count=("GW", "nunique"),
         )
         .reset_index()
     )
+
+    # Filter to only players who have played more than the specified number of games
+    player_df = player_df[player_df["count"] >= number_gameweeks_played_min]
 
     # Identify the minimum gameweek and corresponding value
     min_gameweek_info = df.loc[df.groupby("name")["GW"].idxmin()][["name", "value"]]
@@ -218,13 +234,62 @@ def merge_data(player_data, team_data_selected, season):
     return merged_data
 
 
+# Function to add the 'promoted_from_championship' column
+def add_promoted_column(season_data, promoted_teams_by_season, season_start_year):
+    """
+    Add a binary 'promoted_from_championship' column to the season data.
+
+    Parameters
+    ----------
+    season_data : pd.DataFrame
+        The DataFrame containing the merged player and team data for a specific season.
+    promoted_teams_by_season : dict
+        A dictionary where the key is the season start year and the value is a list of promoted teams.
+    season_start_year : int
+        The start year of the season (e.g., 2021 for the 2021-22 season).
+
+    Returns
+    -------
+    pd.DataFrame
+        The updated DataFrame with the 'promoted_from_championship' column.
+    """
+    # Get promoted teams for the season, or an empty list if not available
+    promoted_teams = promoted_teams_by_season.get(season_start_year, [])
+
+    # Add the binary column
+    season_data["promoted_from_championship"] = season_data["team"].apply(
+        lambda team: 1 if team in promoted_teams else 0
+    )
+
+    return season_data
+
+
+# Main function that processes multiple seasons and saves the data
 def process_and_merge_season_data(start_season, end_season):
-    """Process and save data for multiple seasons, each in its own CSV file."""
+    """
+    Process and save data for multiple seasons, each in its own CSV file.
+
+    Parameters
+    ----------
+    start_season : int
+        The starting season year (e.g., 2018).
+    end_season : int
+        The ending season year (e.g., 2024).
+    """
     for season in range(start_season, end_season + 1):
         player_data, team_data, current_season = fetch_data_for_season(season)
+
         if player_data is not None and team_data is not None:
             team_data_selected = process_team_data(team_data)
             season_data = merge_data(player_data, team_data_selected, current_season)
+
+            # Get the start year of the season (e.g., 2018 from "2018-19")
+            season_start_year = int(current_season[:4])
+
+            # Add 'promoted_from_championship' column
+            season_data = add_promoted_column(
+                season_data, promoted_teams_by_season, season_start_year
+            )
 
             encoding = "utf-8"
 
