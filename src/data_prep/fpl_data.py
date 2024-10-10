@@ -8,6 +8,10 @@ parameters = load_yaml_file(file_path)
 minutes_played_gameweek_min = parameters["minutes_played_gameweek_min"]
 number_gameweeks_played_min = parameters["number_gameweeks_played_min"]
 
+# Load estimated team strengths for missing data
+file_path_estimated_strength = "conf/estimated_team_strength.yaml"
+estimated_team_strength = load_yaml_file(file_path_estimated_strength)
+
 # Load promotion/relegation yaml
 file_path = "conf/promoted_teams_by_season.yaml"
 promoted_teams_by_season = load_yaml_file(file_path)
@@ -173,7 +177,10 @@ def get_fpl_player_data_aggregated(season_year):
     season_start = int(season_year[:4])
 
     # Set encoding based on season start year
-    encoding = "utf-8"
+    if int(season_year[:4]) <= 2018:
+        encoding = "latin-1"
+    else:
+        encoding = "utf-8"
 
     df = fetch_data_from_url(vaastav_url, encoding=encoding)
     player_df = process_fpl_data(df, season_year)
@@ -181,15 +188,71 @@ def get_fpl_player_data_aggregated(season_year):
     return player_df
 
 
+def load_team_data(current_season, estimated_team_strength):
+    """
+    Load team data for a given Premier League season. The function first attempts to
+    load the data from the Fantasy Premier League (FPL) API for the specified season.
+    If this fails, it falls back to using an estimated team strength dataset provided
+    as input.
+
+    Parameters
+    ----------
+    current_season : str
+        The season for which the team data is to be loaded, e.g., '2018-19'.
+    estimated_team_strength : list of dict
+        A list of dictionaries containing fallback team strength data. Each dictionary
+        should have keys 'season', 'team_name', and 'team_strength'.
+
+    """
+
+    # URL for the current season
+    team_data_url = f"https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/{current_season}/teams.csv"
+
+    try:
+        # Try to load the CSV data
+        team_data = pd.read_csv(team_data_url)
+        return team_data[
+            [
+                "name",
+                "strength",
+                "strength_overall_home",
+                "strength_overall_away",
+                "strength_attack_home",
+                "strength_attack_away",
+                "strength_defence_home",
+                "strength_defence_away",
+            ]
+        ]
+    except:
+        # Filter by the current season
+        filtered_data = [
+            item for item in estimated_team_strength if item["season"] == current_season
+        ]
+
+        # Convert to DataFrame and add the extra columns
+        df = pd.DataFrame(filtered_data)[["team_name", "team_strength"]].rename(
+            columns={"team_name": "name", "team_strength": "strength"}
+        )
+        df["strength_overall_home"] = 0
+        df["strength_overall_away"] = 0
+        df["strength_attack_home"] = 0
+        df["strength_attack_away"] = 0
+        df["strength_defence_home"] = 0
+        df["strength_defence_away"] = 0
+
+        return df
+
+
 def fetch_data_for_season(season):
     """Fetch player and team data for a specific season."""
     current_season = f"{season}-{str(season + 1)[2:]}"
 
-    team_data_url = f"https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/{current_season}/teams.csv"
-
     try:
         player_data = get_fpl_player_data_aggregated(current_season)
-        team_data = pd.read_csv(team_data_url)
+        team_data = load_team_data(
+            current_season=current_season,
+            estimated_team_strength=estimated_team_strength,
+        )
         return player_data, team_data, current_season
     except Exception as e:
         print(f"Error fetching data for season {current_season}: {e}")

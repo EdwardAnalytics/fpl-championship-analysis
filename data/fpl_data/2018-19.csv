@@ -1,0 +1,246 @@
+name,team,total_points,position,goals_scored,assists,clean_sheets,yellow_cards,red_cards,goals_conceded,own_goals,penalties_missed,penalties_saved,saves,bonus_points,value_first_gw,team_strength,team_strength_overall_home,team_strength_overall_away,team_strength_attack_home,team_strength_attack_away,team_strength_defence_home,team_strength_defence_away,season,promoted_from_championship
+Mohamed Salah,Liverpool,255,MID,22,11,21,1,0,20,0,0,0,0,18,130,4,0,0,0,0,0,0,2018-19,0
+Sadio Mané,Liverpool,230,MID,22,3,19,2,0,21,0,0,0,0,24,95,4,0,0,0,0,0,0,2018-19,0
+Raheem Sterling,Man City,226,MID,16,15,17,3,0,19,0,0,0,0,25,110,5,0,0,0,0,0,0,2018-19,0
+Eden Hazard,Chelsea,224,MID,16,12,12,2,0,35,0,0,0,0,35,105,4,0,0,0,0,0,0,2018-19,0
+Andrew Robertson,Liverpool,213,DEF,0,12,21,4,0,20,0,0,0,0,29,60,4,0,0,0,0,0,0,2018-19,0
+Virgil van Dijk,Liverpool,208,DEF,4,4,20,1,0,22,0,0,0,0,22,60,4,0,0,0,0,0,0,2018-19,0
+Sergio Agüero,Man City,199,FWD,21,11,17,4,0,14,0,0,0,0,26,110,5,0,0,0,0,0,0,2018-19,0
+Trent Alexander-Arnold,Liverpool,184,DEF,1,13,16,3,0,14,0,0,0,0,25,50,4,0,0,0,0,0,0,2018-19,0
+Gylfi Sigurdsson,Everton,179,MID,13,6,15,3,0,40,0,3,0,0,20,75,3,0,0,0,0,0,0,2018-19,0
+Raúl Jiménez,Wolves,178,FWD,13,10,12,4,0,37,0,0,0,0,31,55,1,0,0,0,0,0,0,2018-19,1
+Paul Pogba,Man Utd,178,MID,13,10,8,6,0,43,0,3,0,0,19,80,4,0,0,0,0,0,0,2018-19,0
+Ryan Fraser,Bournemouth,176,MID,7,13,9,2,0,63,0,0,0,0,23,55,2,0,0,0,0,0,0,2018-19,0
+Aymeric Laporte,Man City,176,DEF,3,3,18,3,0,21,0,0,0,0,16,55,5,0,0,0,0,0,0,2018-19,0
+Alisson Ramses Becker,Liverpool,176,GK,0,0,21,1,0,22,0,0,0,76,9,55,4,0,0,0,0,0,0,2018-19,0
+Pierre-Emerick Aubameyang,Arsenal,173,FWD,18,5,7,0,0,41,0,0,0,0,26,110,4,0,0,0,0,0,0,2018-19,0
+Ederson Santana de Moraes,Man City,169,GK,0,1,20,2,0,23,0,0,0,58,6,55,5,0,0,0,0,0,0,2018-19,0
+Callum Wilson,Bournemouth,167,FWD,14,12,9,3,0,46,0,1,0,0,22,60,2,0,0,0,0,0,0,2018-19,0
+Luka Milivojevic,Crystal Palace,166,MID,12,2,12,10,0,53,0,1,0,0,24,65,2,0,0,0,0,0,0,2018-19,0
+David Luiz Moreira Marinho,Chelsea,164,DEF,3,2,16,3,0,36,0,0,0,0,19,55,4,0,0,0,0,0,0,2018-19,0
+Marcos Alonso,Chelsea,161,DEF,2,8,14,6,0,28,0,0,0,0,21,65,4,0,0,0,0,0,0,2018-19,0
+Jordan Pickford,Everton,161,GK,0,0,14,1,0,46,0,0,3,94,13,50,3,0,0,0,0,0,0,2018-19,0
+Harry Kane,Spurs,159,FWD,17,6,9,5,0,31,0,0,0,0,24,125,1,0,0,0,0,0,0,2018-19,0
+Lucas Digne,Everton,159,DEF,4,5,13,5,0,38,1,0,0,0,22,50,3,0,0,0,0,0,0,2018-19,0
+César Azpilicueta,Chelsea,158,DEF,1,6,16,4,0,39,0,0,0,0,11,65,4,0,0,0,0,0,0,2018-19,0
+Jamie Vardy,Leicester,156,FWD,15,5,11,3,1,33,0,0,0,0,27,90,3,0,0,0,0,0,0,2018-19,0
+Felipe Anderson Pereira Gomes,West Ham,154,MID,9,6,7,3,0,48,0,0,0,0,18,70,2,0,0,0,0,0,0,2018-19,0
+Neil Etheridge,Cardiff,154,GK,0,0,10,2,0,69,0,0,3,141,18,45,1,0,0,0,0,0,0,2018-19,1
+Heung-Min Son,Spurs,151,MID,12,7,10,2,0,19,0,0,0,0,17,85,1,0,0,0,0,0,0,2018-19,0
+Roberto Firmino,Liverpool,150,FWD,11,8,19,0,0,15,0,0,0,0,22,95,4,0,0,0,0,0,0,2018-19,0
+Christian Eriksen,Spurs,150,MID,7,12,8,3,0,35,0,0,0,0,14,95,1,0,0,0,0,0,0,2018-19,0
+Kyle Walker,Man City,148,DEF,1,1,18,3,0,17,0,0,0,0,11,65,5,0,0,0,0,0,0,2018-19,0
+Ricardo Domingos Barbosa Pereira,Leicester,146,DEF,2,8,10,7,0,45,0,0,0,0,22,50,3,0,0,0,0,0,0,2018-19,0
+Bernardo Mota Veiga de Carvalho e Silva,Man City,146,MID,7,7,15,3,0,19,0,0,0,0,17,75,5,0,0,0,0,0,0,2018-19,0
+Hugo Lloris,Spurs,145,GK,0,0,12,0,0,33,0,0,2,100,10,55,1,0,0,0,0,0,0,2018-19,0
+Salomón Rondón,Newcastle,145,FWD,11,8,9,1,0,31,0,0,0,0,20,60,2,0,0,0,0,0,0,2018-19,0
+Lukasz Fabianski,West Ham,143,GK,0,0,7,0,0,55,0,0,1,148,15,45,2,0,0,0,0,0,0,2018-19,0
+Wilfried Zaha,Crystal Palace,143,FWD,10,11,11,8,1,49,0,0,0,0,13,70,2,0,0,0,0,0,0,2018-19,0
+Kepa Arrizabalaga,Chelsea,142,GK,0,0,14,2,0,39,0,0,1,82,7,55,4,0,0,0,0,0,0,2018-19,0
+Matt Doherty,Wolves,141,DEF,4,7,8,5,0,39,1,0,0,0,12,45,1,0,0,0,0,0,0,2018-19,1
+Joshua King,Bournemouth,140,FWD,12,3,10,3,0,57,0,1,0,0,20,65,2,0,0,0,0,0,0,2018-19,0
+Patrick van Aanholt,Crystal Palace,140,DEF,3,2,12,3,0,46,0,0,0,0,17,55,2,0,0,0,0,0,0,2018-19,0
+Richarlison de Andrade,Everton,138,MID,11,2,11,4,0,33,0,0,0,0,12,65,3,0,0,0,0,0,0,2018-19,0
+Leroy Sané,Man City,138,MID,9,11,9,1,0,13,0,0,0,0,13,95,5,0,0,0,0,0,0,2018-19,0
+Alexandre Lacazette,Arsenal,138,FWD,11,9,6,2,0,27,0,0,0,0,18,95,4,0,0,0,0,0,0,2018-19,0
+David Silva,Man City,138,MID,6,8,16,2,0,13,0,0,0,0,14,85,5,0,0,0,0,0,0,2018-19,0
+Nathan Redmond,Southampton,135,MID,6,5,9,3,0,56,0,0,0,0,12,55,2,0,0,0,0,0,0,2018-19,0
+James Maddison,Leicester,134,MID,7,6,8,3,0,41,0,1,0,0,12,65,3,0,0,0,0,0,0,2018-19,0
+Aleksandar Mitrovic,Fulham,133,FWD,11,4,5,7,0,75,0,0,0,0,12,65,1,0,0,0,0,0,0,2018-19,1
+Martin Dubravka,Newcastle,131,GK,0,0,11,1,0,48,0,0,0,96,10,50,2,0,0,0,0,0,0,2018-19,0
+Andros Townsend,Crystal Palace,131,MID,6,5,11,1,0,44,0,0,0,0,8,60,2,0,0,0,0,0,0,2018-19,0
+Ben Foster,Watford,129,GK,0,0,7,1,0,59,0,0,1,128,11,45,2,0,0,0,0,0,0,2018-19,0
+Michael Keane,Everton,129,DEF,1,2,13,2,0,39,0,0,0,0,15,50,3,0,0,0,0,0,0,2018-19,0
+Seamus Coleman,Everton,125,DEF,2,2,13,1,0,30,1,0,0,0,12,55,3,0,0,0,0,0,0,2018-19,0
+Lucas Rodrigues Moura da Silva,Spurs,124,MID,10,2,14,3,0,14,0,0,0,0,8,70,1,0,0,0,0,0,0,2018-19,0
+Ayoze Pérez,Newcastle,124,FWD,10,2,11,2,0,33,0,0,0,0,14,65,2,0,0,0,0,0,0,2018-19,0
+Willy Boly,Wolves,123,DEF,4,0,8,2,0,40,0,0,0,0,10,45,1,0,0,0,0,0,0,2018-19,1
+Gerard Deulofeu,Watford,123,MID,9,5,9,3,0,27,0,0,0,0,10,55,2,0,0,0,0,0,0,2018-19,0
+David Brooks,Bournemouth,122,MID,7,6,9,3,0,40,0,0,0,0,7,50,2,0,0,0,0,0,0,2018-19,0
+Roberto Pereyra,Watford,121,MID,6,4,6,3,0,52,0,0,0,0,13,60,2,0,0,0,0,0,0,2018-19,0
+Aaron Wan-Bissaka,Crystal Palace,120,DEF,0,3,12,4,1,47,0,0,0,0,18,40,2,0,0,0,0,0,0,2018-19,0
+Kasper Schmeichel,Leicester,120,GK,0,0,10,3,0,48,0,0,0,90,6,50,3,0,0,0,0,0,0,2018-19,0
+Nathan Aké,Bournemouth,120,DEF,4,1,10,3,0,70,0,0,0,0,8,50,2,0,0,0,0,0,0,2018-19,0
+David De Gea,Man Utd,120,GK,0,0,7,1,0,54,0,0,0,123,7,60,4,0,0,0,0,0,0,2018-19,0
+Diogo Jota,Wolves,119,MID,8,6,10,11,0,25,0,0,0,0,11,65,1,0,0,0,0,0,0,2018-19,1
+James McArthur,Crystal Palace,119,MID,3,7,11,7,0,48,0,0,0,0,7,50,2,0,0,0,0,0,0,2018-19,0
+Benjamin Chilwell,Leicester,118,DEF,0,5,10,4,0,43,0,0,0,0,8,50,3,0,0,0,0,0,0,2018-19,0
+Chris Wood,Burnley,118,FWD,9,3,7,2,0,40,0,0,0,0,17,65,3,0,0,0,0,0,0,2018-19,0
+Rui Pedro dos Santos Patrício,Wolves,118,GK,0,0,8,0,0,46,0,0,0,97,4,45,1,0,0,0,0,0,0,2018-19,1
+Abdoulaye Doucouré,Watford,117,MID,4,7,5,7,0,56,1,0,0,0,13,60,2,0,0,0,0,0,0,2018-19,0
+Shane Duffy,Brighton,117,DEF,5,2,7,4,0,54,0,0,0,0,9,45,2,0,0,0,0,0,0,2018-19,0
+Marcus Rashford,Man Utd,116,FWD,8,7,6,2,0,34,0,0,0,0,13,70,4,0,0,0,0,0,0,2018-19,0
+Kieran Trippier,Spurs,116,DEF,1,5,10,2,0,23,1,0,0,0,16,60,1,0,0,0,0,0,0,2018-19,0
+Antonio Rüdiger,Chelsea,115,DEF,1,2,12,7,0,35,0,0,0,0,9,60,4,0,0,0,0,0,0,2018-19,0
+Anthony Martial,Man Utd,114,MID,10,4,5,1,0,22,0,0,0,0,13,75,4,0,0,0,0,0,0,2018-19,0
+Glenn Murray,Brighton,113,FWD,12,1,4,5,0,41,0,0,0,0,14,65,2,0,0,0,0,0,0,2018-19,0
+João Filipe Iria Santos Moutinho,Wolves,112,MID,1,7,9,4,0,38,0,0,0,0,13,55,1,0,0,0,0,0,0,2018-19,1
+Troy Deeney,Watford,111,FWD,9,4,5,4,0,43,0,0,0,0,13,60,2,0,0,0,0,0,0,2018-19,0
+Marko Arnautovic,West Ham,110,FWD,10,4,4,2,0,32,0,0,0,0,15,70,2,0,0,0,0,0,0,2018-19,0
+N'Golo Kanté,Chelsea,109,MID,3,4,14,3,0,36,0,0,0,0,3,50,4,0,0,0,0,0,0,2018-19,0
+Matt Ritchie,Newcastle,109,MID,2,8,10,9,0,40,0,1,0,0,7,60,2,0,0,0,0,0,0,2018-19,0
+Ashley Westwood,Burnley,108,MID,2,8,7,5,0,52,0,0,0,0,10,45,3,0,0,0,0,0,0,2018-19,0
+Toby Alderweireld,Spurs,106,DEF,0,0,12,2,0,30,1,0,0,0,7,60,1,0,0,0,0,0,0,2018-19,0
+Georginio Wijnaldum,Liverpool,105,MID,3,1,18,3,0,16,0,0,0,0,9,55,4,0,0,0,0,0,0,2018-19,0
+Bernd Leno,Arsenal,104,GK,0,0,6,0,0,42,0,0,0,102,5,50,4,0,0,0,0,0,0,2018-19,0
+Mathew Ryan,Brighton,104,GK,0,0,6,2,0,55,0,0,0,97,11,45,2,0,0,0,0,0,0,2018-19,0
+Jonathan Castro Otto,Wolves,103,DEF,1,3,8,5,0,37,0,0,0,0,9,45,1,0,0,0,0,0,0,2018-19,1
+Ashley Barnes,Burnley,101,FWD,10,3,7,7,0,35,1,0,0,0,10,60,3,0,0,0,0,0,0,2018-19,0
+Víctor Camarasa,Cardiff,101,MID,5,3,9,6,0,52,0,0,0,0,5,45,1,0,0,0,0,0,0,2018-19,1
+Ilkay Gündogan,Man City,100,MID,5,3,13,3,0,13,0,0,0,0,10,55,5,0,0,0,0,0,0,2018-19,0
+Jonas Lössl,Huddersfield,99,GK,0,1,5,1,0,54,0,0,1,88,9,45,2,0,0,0,0,0,0,2018-19,0
+Sean Morrison,Cardiff,97,DEF,1,4,9,6,0,63,0,0,0,0,5,50,1,0,0,0,0,0,0,2018-19,1
+Rúben Diogo da Silva Neves,Wolves,97,MID,3,3,8,8,0,40,0,0,0,0,7,50,1,0,0,0,0,0,0,2018-19,1
+Michail Antonio,West Ham,97,MID,6,5,7,3,0,26,0,0,0,0,6,70,2,0,0,0,0,0,0,2018-19,0
+Bruno Ecuele Manga,Cardiff,96,DEF,0,1,10,0,0,67,0,0,0,0,4,45,1,0,0,0,0,0,0,2018-19,1
+Mark Noble,West Ham,96,MID,5,4,7,6,0,30,0,0,0,0,5,50,2,0,0,0,0,0,0,2018-19,0
+José Holebas,Watford,96,DEF,3,7,5,12,0,37,0,0,0,0,10,45,2,0,0,0,0,0,0,2018-19,0
+Jorge Luiz Frello Filho,Chelsea,96,MID,2,0,16,8,0,37,0,0,0,0,4,50,4,0,0,0,0,0,0,2018-19,0
+Sol Bamba,Cardiff,96,DEF,4,1,7,6,0,50,0,0,0,0,11,45,1,0,0,0,0,0,0,2018-19,1
+Pedro Rodríguez Ledesma,Chelsea,96,MID,7,2,7,1,0,19,0,0,0,0,12,65,4,0,0,0,0,0,0,2018-19,0
+James Tarkowski,Burnley,96,DEF,3,2,7,8,0,63,0,0,0,0,7,50,3,0,0,0,0,0,0,2018-19,0
+Jamaal Lascelles,Newcastle,94,DEF,0,1,10,3,0,34,0,0,0,0,8,50,2,0,0,0,0,0,0,2018-19,0
+Romelu Lukaku,Man Utd,94,FWD,10,0,4,4,0,34,0,0,0,0,14,110,4,0,0,0,0,0,0,2018-19,0
+Conor Coady,Wolves,94,DEF,0,0,9,5,0,46,3,0,0,0,6,45,1,0,0,0,0,0,0,2018-19,1
+Harry Maguire,Leicester,93,DEF,3,1,6,6,0,38,0,0,0,0,10,55,3,0,0,0,0,0,0,2018-19,0
+Fabian Schär,Newcastle,93,DEF,4,1,7,10,0,22,0,0,0,0,9,50,2,0,0,0,0,0,0,2018-19,0
+Declan Rice,West Ham,92,DEF,2,0,6,4,0,45,0,0,0,0,9,45,2,0,0,0,0,0,0,2018-19,0
+Luke Shaw,Man Utd,91,DEF,1,5,6,11,0,39,0,0,0,0,11,50,4,0,0,0,0,0,0,2018-19,0
+Craig Cathcart,Watford,91,DEF,3,0,6,2,0,53,2,0,0,0,5,45,2,0,0,0,0,0,0,2018-19,0
+Pierre-Emile Højbjerg,Southampton,90,MID,4,3,4,7,2,59,0,0,0,0,8,45,2,0,0,0,0,0,0,2018-19,0
+Lewis Dunk,Brighton,90,DEF,2,1,7,5,1,56,0,0,0,0,6,45,2,0,0,0,0,0,0,2018-19,0
+Granit Xhaka,Arsenal,90,MID,4,3,7,9,0,35,0,0,0,0,8,55,4,0,0,0,0,0,0,2018-19,0
+James Ward-Prowse,Southampton,89,MID,7,0,3,4,0,37,1,0,0,0,15,55,2,0,0,0,0,0,0,2018-19,0
+Ryan Bennett,Wolves,89,DEF,1,0,9,12,0,38,0,0,0,0,1,40,1,0,0,0,0,0,0,2018-19,1
+Willian Borges Da Silva,Chelsea,89,MID,2,5,11,2,0,21,0,0,0,0,5,75,4,0,0,0,0,0,0,2018-19,0
+Wilfred Ndidi,Leicester,89,MID,2,0,9,7,0,47,0,0,0,0,4,50,3,0,0,0,0,0,0,2018-19,0
+Mamadou Sakho,Crystal Palace,88,DEF,0,0,9,2,0,35,0,0,0,0,13,50,2,0,0,0,0,0,0,2018-19,0
+Issa Diop,West Ham,87,DEF,1,0,7,4,0,43,1,0,0,0,6,45,2,0,0,0,0,0,0,2018-19,0
+Jack Cork,Burnley,87,MID,1,2,8,6,0,63,0,0,0,0,0,50,3,0,0,0,0,0,0,2018-19,0
+James Tomkins,Crystal Palace,86,DEF,1,1,10,6,0,37,0,0,0,0,0,45,2,0,0,0,0,0,0,2018-19,0
+Sergio Rico,Fulham,86,GK,0,0,5,1,0,56,0,0,0,111,8,45,1,0,0,0,0,0,0,2018-19,1
+Steve Cook,Bournemouth,85,DEF,1,1,9,3,0,56,1,0,0,0,6,45,2,0,0,0,0,0,0,2018-19,0
+Will Hughes,Watford,84,MID,2,4,7,5,0,38,0,0,0,0,5,50,2,0,0,0,0,0,0,2018-19,0
+Mesut Özil,Arsenal,84,MID,5,3,5,2,0,21,0,0,0,0,9,85,4,0,0,0,0,0,0,2018-19,0
+Bamidele Alli,Spurs,84,MID,4,4,8,4,0,18,0,0,0,0,8,90,1,0,0,0,0,0,0,2018-19,0
+Victor Lindelöf,Man Utd,84,DEF,1,1,6,1,0,39,1,0,0,0,9,50,4,0,0,0,0,0,0,2018-19,0
+Henrikh Mkhitaryan,Arsenal,84,MID,5,4,3,1,0,22,0,0,0,0,10,70,4,0,0,0,0,0,0,2018-19,0
+Solomon March,Brighton,83,MID,1,5,6,1,0,36,0,0,0,0,5,50,2,0,0,0,0,0,0,2018-19,0
+Theo Walcott,Everton,83,MID,4,3,6,1,0,31,0,0,0,0,4,65,3,0,0,0,0,0,0,2018-19,0
+Ben Mee,Burnley,81,DEF,0,2,8,9,0,68,2,0,0,0,5,50,3,0,0,0,0,0,0,2018-19,0
+Shkodran Mustafi,Arsenal,80,DEF,2,0,6,9,0,36,0,0,0,0,5,55,4,0,0,0,0,0,0,2018-19,0
+Vicente Guaita,Crystal Palace,80,GK,0,0,7,2,0,23,0,0,0,64,8,45,2,0,0,0,0,0,0,2018-19,0
+Charlie Taylor,Burnley,80,DEF,0,1,7,2,0,64,0,0,0,0,2,45,3,0,0,0,0,0,0,2018-19,0
+Danny Ings,Southampton,80,FWD,7,2,5,1,0,26,0,0,0,0,9,55,2,0,0,0,0,0,0,2018-19,0
+Danny Rose,Spurs,80,DEF,0,4,8,5,0,16,0,0,0,0,5,60,1,0,0,0,0,0,0,2018-19,0
+Etienne Capoue,Watford,79,MID,1,3,8,14,1,48,0,0,0,0,8,50,2,0,0,0,0,0,0,2018-19,0
+Christopher Schindler,Huddersfield,79,DEF,1,1,5,4,0,70,0,0,0,0,7,45,2,0,0,0,0,0,0,2018-19,0
+James Milner,Liverpool,79,MID,3,5,9,3,1,11,0,0,0,0,11,55,4,0,0,0,0,0,0,2018-19,0
+Robert Snodgrass,West Ham,79,MID,2,5,5,6,0,27,0,0,0,0,9,55,2,0,0,0,0,0,0,2018-19,0
+Sead Kolasinac,Arsenal,78,DEF,0,7,5,5,0,28,1,0,0,0,10,50,4,0,0,0,0,0,0,2018-19,0
+John Stones,Man City,78,DEF,0,0,9,1,0,15,0,0,0,0,9,55,5,0,0,0,0,0,0,2018-19,0
+Joel Matip,Liverpool,78,DEF,1,0,9,3,0,11,0,0,0,0,7,50,4,0,0,0,0,0,0,2018-19,0
+Idrissa Gueye,Everton,78,MID,0,2,13,5,0,31,0,0,0,0,0,50,3,0,0,0,0,0,0,2018-19,0
+Fernando Luiz Rosa,Man City,77,MID,1,3,12,5,0,15,0,0,0,0,4,55,5,0,0,0,0,0,0,2018-19,0
+Bernard Anício Caldeira Duarte,Everton,77,MID,1,3,13,4,0,18,0,0,0,0,5,60,3,0,0,0,0,0,0,2018-19,0
+Pascal Groß,Brighton,77,MID,3,3,3,1,0,30,0,1,0,0,12,70,2,0,0,0,0,0,0,2018-19,0
+Davinson Sánchez,Spurs,77,DEF,1,2,6,2,0,22,0,0,0,0,4,60,1,0,0,0,0,0,0,2018-19,0
+Joe Bennett,Cardiff,77,DEF,0,1,9,5,0,50,0,0,0,0,4,45,1,0,0,0,0,0,0,2018-19,1
+Wes Morgan,Leicester,76,DEF,3,0,6,1,2,28,0,0,0,0,7,45,3,0,0,0,0,0,0,2018-19,0
+Jonny Evans,Leicester,76,DEF,1,0,8,2,0,24,0,0,0,0,3,50,3,0,0,0,0,0,0,2018-19,0
+Callum Paterson,Cardiff,75,MID,4,2,5,4,0,38,0,0,0,0,4,55,1,0,0,0,0,0,0,2018-19,1
+Nacho Monreal,Arsenal,75,DEF,1,4,5,5,0,24,0,0,0,0,7,55,4,0,0,0,0,0,0,2018-19,0
+David Junior Hoilett,Cardiff,74,MID,3,2,6,3,0,42,0,0,0,0,4,55,1,0,0,0,0,0,0,2018-19,1
+Alex McCarthy,Southampton,73,GK,0,0,4,1,0,44,0,0,0,78,6,45,2,0,0,0,0,0,0,2018-19,0
+Aaron Mooy,Huddersfield,73,MID,3,1,3,3,0,45,0,0,0,0,5,55,2,0,0,0,0,0,0,2018-19,0
+Jeffrey Schlupp,Crystal Palace,73,DEF,3,3,4,1,0,20,0,0,0,0,3,45,2,0,0,0,0,0,0,2018-19,0
+Moussa Sissoko,Spurs,73,MID,0,3,11,2,0,27,0,0,0,0,3,50,1,0,0,0,0,0,0,2018-19,0
+Ashley Young,Man Utd,72,DEF,2,3,4,8,1,41,0,0,0,0,4,60,4,0,0,0,0,0,0,2018-19,0
+André Schürrle,Fulham,71,MID,6,0,2,2,0,41,0,0,0,0,2,60,1,0,0,0,0,0,0,2018-19,1
+Davy Pröpper,Brighton,71,MID,1,1,4,2,0,45,0,0,0,0,3,50,2,0,0,0,0,0,0,2018-19,0
+Ryan Sessegnon,Fulham,69,MID,1,5,3,0,0,50,0,0,0,0,2,65,1,0,0,0,0,0,0,2018-19,1
+Demarai Gray,Leicester,69,MID,4,0,6,2,0,25,0,0,0,0,3,55,3,0,0,0,0,0,0,2018-19,0
+Joe Hart,Burnley,69,GK,0,0,4,0,0,41,0,0,1,77,7,45,3,0,0,0,0,0,0,2018-19,0
+Johann Berg Gudmundsson,Burnley,69,MID,2,5,5,2,0,30,0,0,0,0,5,60,3,0,0,0,0,0,0,2018-19,0
+Adam Smith,Bournemouth,68,DEF,1,1,8,5,1,32,0,0,0,0,1,45,2,0,0,0,0,0,0,2018-19,0
+Dominic Calvert-Lewin,Everton,68,FWD,4,5,8,2,0,24,0,0,0,0,2,55,3,0,0,0,0,0,0,2018-19,0
+Alex Iwobi,Arsenal,68,MID,2,5,4,0,0,25,0,0,0,0,3,55,4,0,0,0,0,0,0,2018-19,0
+Isaac Hayden,Newcastle,68,MID,1,4,7,3,0,25,0,0,0,0,5,45,2,0,0,0,0,0,0,2018-19,0
+Wayne Hennessey,Crystal Palace,67,GK,0,0,5,0,0,24,0,0,1,44,6,45,2,0,0,0,0,0,0,2018-19,0
+Jesse Lingard,Man Utd,67,MID,4,2,3,3,0,24,0,0,0,0,5,70,4,0,0,0,0,0,0,2018-19,0
+Lucas Torreira,Arsenal,67,MID,2,3,5,7,0,32,0,0,0,0,6,50,4,0,0,0,0,0,0,2018-19,0
+Mathias Jorgensen,Huddersfield,67,DEF,3,1,3,6,0,38,0,0,0,0,4,45,2,0,0,0,0,0,0,2018-19,0
+Jefferson Lerma,Bournemouth,66,MID,1,2,9,12,0,47,1,0,0,0,4,45,2,0,0,0,0,0,0,2018-19,0
+Jean Michael Seri,Fulham,66,MID,1,3,3,5,0,47,0,0,0,0,6,55,1,0,0,0,0,0,0,2018-19,1
+Jan Vertonghen,Spurs,66,DEF,1,0,6,3,1,23,0,0,0,0,7,60,1,0,0,0,0,0,0,2018-19,0
+Jeff Hendrick,Burnley,65,MID,2,2,4,4,0,43,0,0,0,0,3,55,3,0,0,0,0,0,0,2018-19,0
+Dale Stephens,Brighton,65,MID,1,1,5,6,0,44,0,0,0,0,4,45,2,0,0,0,0,0,0,2018-19,0
+Tom Cairney,Fulham,64,MID,1,1,5,0,0,42,0,0,0,0,3,50,1,0,0,0,0,0,0,2018-19,1
+Sokratis Papastathopoulos,Arsenal,64,DEF,1,2,5,11,0,33,0,0,0,0,4,55,4,0,0,0,0,0,0,2018-19,0
+Aron Gunnarsson,Cardiff,64,MID,1,1,6,5,0,40,0,0,0,0,3,45,1,0,0,0,0,0,0,2018-19,1
+Asmir Begovic,Bournemouth,63,GK,0,0,5,0,0,47,0,0,0,59,4,45,2,0,0,0,0,0,0,2018-19,0
+Josh Murphy,Cardiff,63,MID,2,2,7,1,0,24,0,0,0,0,3,50,1,0,0,0,0,0,0,2018-19,1
+Alex Pritchard,Huddersfield,62,MID,2,0,7,2,0,33,0,0,0,0,2,50,2,0,0,0,0,0,0,2018-19,0
+Paul Dummett,Newcastle,62,DEF,0,0,7,1,0,26,0,0,0,0,3,45,2,0,0,0,0,0,0,2018-19,0
+DeAndre Yedlin,Newcastle,62,DEF,1,2,5,6,1,41,1,0,0,0,1,45,2,0,0,0,0,0,0,2018-19,0
+Anthony Knockaert,Brighton,61,MID,2,5,3,3,1,34,0,0,0,0,2,55,2,0,0,0,0,0,0,2018-19,0
+Philip Billing,Huddersfield,61,MID,2,0,5,6,0,39,0,0,0,0,4,45,2,0,0,0,0,0,0,2018-19,0
+André Filipe Tavares Gomes,Everton,61,MID,1,2,9,7,0,27,0,0,0,0,2,55,3,0,0,0,0,0,0,2018-19,0
+Fabián Balbuena,West Ham,61,DEF,1,0,5,1,0,31,0,0,0,0,3,45,2,0,0,0,0,0,0,2018-19,0
+Cheikhou Kouyaté,Crystal Palace,60,MID,0,3,9,1,0,26,0,0,0,0,0,50,2,0,0,0,0,0,0,2018-19,0
+Francisco Femenía Far,Watford,59,DEF,1,1,4,1,0,38,0,0,0,0,6,45,2,0,0,0,0,0,0,2018-19,0
+Calum Chambers,Fulham,59,DEF,2,0,5,8,0,50,0,0,0,0,0,45,1,0,0,0,0,0,0,2018-19,1
+Nemanja Matic,Man Utd,59,MID,1,0,6,6,1,37,0,0,0,0,2,50,4,0,0,0,0,0,0,2018-19,0
+Terence Kongolo,Huddersfield,59,DEF,1,1,4,4,0,64,1,0,0,0,4,45,2,0,0,0,0,0,0,2018-19,0
+Naby Keita,Liverpool,59,MID,2,1,10,0,0,7,0,0,0,0,3,75,4,0,0,0,0,0,0,2018-19,0
+Ben Davies,Spurs,59,DEF,0,0,6,2,0,24,0,0,0,0,5,60,1,0,0,0,0,0,0,2018-19,0
+Héctor Bellerín,Arsenal,58,DEF,0,5,4,3,0,18,1,0,0,0,5,55,4,0,0,0,0,0,0,2018-19,0
+Tom Heaton,Burnley,58,GK,0,0,4,3,0,27,0,0,0,63,4,50,3,0,0,0,0,0,0,2018-19,0
+Bobby Reid,Cardiff,58,FWD,4,1,4,0,0,28,0,0,0,0,8,55,1,0,0,0,0,0,0,2018-19,1
+Steve Mounie,Huddersfield,57,FWD,2,3,5,1,0,27,0,0,0,0,4,60,2,0,0,0,0,0,0,2018-19,0
+Chris Smalling,Man Utd,56,DEF,1,0,4,1,0,36,1,0,0,0,3,60,4,0,0,0,0,0,0,2018-19,0
+Ryan Bertrand,Southampton,56,DEF,1,0,6,8,0,42,0,0,0,0,1,50,2,0,0,0,0,0,0,2018-19,0
+Jordan Henderson,Liverpool,55,MID,0,2,12,0,1,12,0,0,0,0,0,55,4,0,0,0,0,0,0,2018-19,0
+Eric Dier,Spurs,54,MID,3,0,5,3,0,18,0,0,0,0,3,50,1,0,0,0,0,0,0,2018-19,0
+Fabio Henrique Tavares,Liverpool,53,MID,0,2,11,6,0,13,0,0,0,0,0,60,4,0,0,0,0,0,0,2018-19,0
+Pablo Zabaleta,West Ham,53,DEF,0,1,4,4,0,34,0,0,0,0,4,45,2,0,0,0,0,0,0,2018-19,0
+Mateo Kovacic,Chelsea,53,MID,0,2,9,2,0,16,0,0,0,0,2,60,4,0,0,0,0,0,0,2018-19,0
+Jonathan Hogg,Huddersfield,53,MID,0,1,5,7,1,43,0,0,0,0,3,45,2,0,0,0,0,0,0,2018-19,0
+Adrian Mariappa,Watford,52,DEF,0,0,5,3,0,30,0,0,0,0,2,45,2,0,0,0,0,0,0,2018-19,0
+Mohamed Diamé,Newcastle,51,MID,0,0,7,3,0,31,0,0,0,0,0,50,2,0,0,0,0,0,0,2018-19,0
+Cédric Soares,Southampton,51,DEF,1,2,4,4,0,30,0,0,0,0,7,45,2,0,0,0,0,0,0,2018-19,0
+Oriol Romeu Vidal,Southampton,51,MID,1,0,6,7,0,31,0,0,0,0,3,45,2,0,0,0,0,0,0,2018-19,0
+Joe Bryan,Fulham,51,DEF,0,1,5,5,0,54,1,0,0,0,4,50,1,0,0,0,0,0,0,2018-19,1
+Jannik Vestergaard,Southampton,50,DEF,0,0,4,2,0,31,0,0,0,0,0,50,2,0,0,0,0,0,0,2018-19,0
+Daryl Janmaat,Watford,50,DEF,0,2,3,2,0,22,0,0,0,0,6,50,2,0,0,0,0,0,0,2018-19,0
+Tim Ream,Fulham,48,DEF,0,0,5,1,0,44,0,0,0,0,4,45,1,0,0,0,0,0,0,2018-19,1
+Dan Gosling,Bournemouth,48,MID,2,2,4,8,0,32,0,0,0,0,0,50,2,0,0,0,0,0,0,2018-19,0
+Marc Albrighton,Leicester,47,MID,1,1,5,1,0,10,0,0,0,0,4,55,3,0,0,0,0,0,0,2018-19,0
+Florent Hadergjonaj,Huddersfield,47,DEF,0,0,4,1,0,34,0,0,0,0,1,45,2,0,0,0,0,0,0,2018-19,0
+Jan Bednarek,Southampton,47,DEF,0,1,3,7,0,36,0,0,0,0,3,40,2,0,0,0,0,0,0,2018-19,0
+Harry Winks,Spurs,46,MID,1,0,6,2,0,17,0,0,0,0,3,55,1,0,0,0,0,0,0,2018-19,0
+Gaëtan Bong,Brighton,46,DEF,0,0,5,0,0,33,0,0,0,0,0,45,2,0,0,0,0,0,0,2018-19,0
+Harry Arter,Cardiff,46,MID,0,1,7,10,0,37,0,0,0,0,0,50,1,0,0,0,0,0,0,2018-19,1
+Leander Dendoncker,Wolves,46,MID,2,0,3,1,0,21,0,0,0,0,1,45,1,0,0,0,0,0,0,2018-19,1
+Angelo Ogbonna,West Ham,45,DEF,1,1,2,2,0,35,0,0,0,0,2,45,2,0,0,0,0,0,0,2018-19,0
+Arthur Masuaku,West Ham,45,MID,0,2,4,2,0,26,0,0,0,0,0,45,2,0,0,0,0,0,0,2018-19,0
+Maya Yoshida,Southampton,44,DEF,0,1,3,0,0,29,0,0,0,0,4,45,2,0,0,0,0,0,0,2018-19,0
+Martín Montoya,Brighton,44,DEF,0,1,3,4,0,41,0,0,0,0,1,45,2,0,0,0,0,0,0,2018-19,0
+Jack Stephens,Southampton,44,DEF,1,0,3,2,0,30,0,0,0,0,4,45,2,0,0,0,0,0,0,2018-19,0
+Chris Löwe,Huddersfield,42,DEF,0,3,1,1,0,47,0,0,0,0,6,45,2,0,0,0,0,0,0,2018-19,0
+Erik Durm,Huddersfield,41,DEF,0,1,3,0,0,40,0,0,0,0,2,45,2,0,0,0,0,0,0,2018-19,0
+Denis Odoi,Fulham,41,DEF,0,1,3,4,0,62,1,0,0,0,2,45,1,0,0,0,0,0,0,2018-19,1
+Mario Lemina,Southampton,40,MID,0,2,4,5,0,32,0,0,0,0,1,50,2,0,0,0,0,0,0,2018-19,0
+Joe Ralls,Cardiff,39,MID,0,0,5,4,1,37,0,1,0,0,0,50,1,0,0,0,0,0,0,2018-19,1
+Christian Kabasele,Watford,37,DEF,0,0,3,2,0,24,0,0,0,0,1,45,2,0,0,0,0,0,0,2018-19,0
+Charlie Daniels,Bournemouth,37,DEF,0,0,4,3,0,32,0,0,0,0,1,45,2,0,0,0,0,0,0,2018-19,0
+Maxime Le Marchand,Fulham,37,DEF,0,1,3,5,0,53,0,0,0,0,1,45,1,0,0,0,0,0,0,2018-19,1
+Bernardo Fernandes da Silva Junior,Brighton,36,DEF,0,1,2,4,0,29,0,0,0,0,0,45,2,0,0,0,0,0,0,2018-19,0
+Matteo Guendouzi,Arsenal,36,MID,0,0,3,8,0,30,0,0,0,0,0,45,4,0,0,0,0,0,0,2018-19,0
+Juninho Bacuna,Huddersfield,35,MID,1,0,0,3,0,34,0,0,0,0,1,45,2,0,0,0,0,0,0,2018-19,0
+Cyrus Christie,Fulham,35,DEF,0,1,3,7,0,40,0,0,0,0,2,45,1,0,0,0,0,0,0,2018-19,1
+Andrew Surman,Bournemouth,35,MID,0,0,4,1,0,36,0,0,0,0,0,50,2,0,0,0,0,0,0,2018-19,0
+Yves Bissouma,Brighton,34,MID,0,0,3,4,0,28,0,0,0,0,0,50,2,0,0,0,0,0,0,2018-19,0
+Phil Bardsley,Burnley,33,DEF,0,0,4,9,0,27,1,0,0,0,0,45,3,0,0,0,0,0,0,2018-19,0
+Matthew Lowton,Burnley,32,DEF,0,0,4,7,0,40,0,0,0,0,1,50,3,0,0,0,0,0,0,2018-19,0
+Aaron Cresswell,West Ham,31,DEF,0,1,1,1,0,24,0,0,0,0,0,55,2,0,0,0,0,0,0,2018-19,0
