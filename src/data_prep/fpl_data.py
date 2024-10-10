@@ -6,7 +6,6 @@ from src.tools.yaml_loader import load_yaml_file
 file_path = "conf/parameters.yaml"
 parameters = load_yaml_file(file_path)
 minutes_played_gameweek_min = parameters["minutes_played_gameweek_min"]
-number_gameweeks_played_min = parameters["number_gameweeks_played_min"]
 
 # Load estimated team strengths for missing data
 file_path_estimated_strength = "conf/estimated_team_strength.yaml"
@@ -88,9 +87,17 @@ def process_fpl_data(df, season_year):
     # Filter the main DataFrame for players who were in Gameweek 1
     df = df[df["name"].isin(players_gw1)]
 
-    player_df = (
+    # Filter for gameweeks where minutes > minutes_played_gameweek_min and calculate count
+    count_df = (
         df[df["minutes"] > minutes_played_gameweek_min]
-        .groupby("name")
+        .groupby("name")["GW"]
+        .nunique()
+        .reset_index(name="count_gws_min_minutes")
+    )
+
+    # Aggregate all other statistics without filtering
+    player_df = (
+        df.groupby("name")
         .agg(
             total_points=("total_points", "sum"),
             goals_scored=("goals_scored", "sum"),
@@ -104,13 +111,12 @@ def process_fpl_data(df, season_year):
             penalties_saved=("penalties_saved", "sum"),
             saves=("saves", "sum"),
             bonus_points=("bonus", "sum"),
-            count=("GW", "nunique"),
         )
         .reset_index()
     )
 
-    # Filter to only players who have played more than the specified number of games
-    player_df = player_df[player_df["count"] >= number_gameweeks_played_min]
+    # Merge the count data with the aggregated stats
+    player_df = player_df.merge(count_df, on="name", how="left")
 
     # Identify the minimum gameweek and corresponding value
     min_gameweek_info = df.loc[df.groupby("name")["GW"].idxmin()][["name", "value"]]
@@ -147,6 +153,7 @@ def process_fpl_data(df, season_year):
         "saves",
         "bonus_points",
         "value_first_gw",
+        "count_gws_min_minutes",
     ]
 
     # Reorder the DataFrame columns
