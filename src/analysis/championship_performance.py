@@ -120,6 +120,9 @@ def get_top_ranked_players(df, metric, top_n=25):
     # Optional: Sort the top ranked players by the specified metric for better readability
     top_ranked = top_ranked.sort_values(by=metric, ascending=False)
 
+    # Drop the rank column
+    top_ranked.drop(columns=["Rank"], inplace=True)
+
     return top_ranked
 
 
@@ -371,6 +374,7 @@ def format_dataframe(df, metric, export_csv=False):
     # Step 3: Rename columns
     rename_dict = {
         "Season": "Championship Season",
+        "position": "Position",
         metric: f"Championship {metric}",
         "season": "FPL Season",
         "total_points": "FPL Points",
