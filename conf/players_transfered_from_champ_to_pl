@@ -1,0 +1,91 @@
+--https://www.teamtalk.com/news/most-expensive-transfers-from-championship-to-premier-league
+transfers:
+  - player: Nathan Aké
+    year: 2016
+    from: Bournemouth
+    to: Chelsea
+  - player: James Tarkowski
+    year: 2016
+    from: Brentford
+    to: Burnley
+  - player: Callum Wilson
+    year: 2016
+    from: Bournemouth
+    to: Bournemouth
+  - player: Ryan Sessegnon
+    year: 2017
+    from: Fulham
+    to: Tottenham Hotspur
+  - player: Harry Maguire
+    year: 2017
+    from: Hull City
+    to: Leicester City
+  - player: James Maddison
+    year: 2018
+    from: Norwich City
+    to: Leicester City
+  - player: Richarlison
+    year: 2018
+    from: Watford
+    to: Everton
+  - player: Ben Godfrey
+    year: 2019
+    from: Norwich City
+    to: Everton
+  - player: Jack Grealish
+    year: 2021
+    from: Aston Villa
+    to: Manchester City
+  - player: Jarrod Bowen
+    year: 2019
+    from: Hull City
+    to: West Ham United
+  - player: Emiliano Buendía
+    year: 2021
+    from: Norwich City
+    to: Aston Villa
+  - player: Chris Wood
+    year: 2022
+    from: Burnley
+    to: Newcastle United
+  - player: Morgan Gibbs-White
+    year: 2018
+    from: Sheffield United
+    to: Nottingham Forest
+  - player: Brennan Johnson
+    year: 2022
+    from: Nottingham Forest
+    to: Tottenham Hotspur
+  - player: Sander Berge
+    year: 2023
+    from: Sheffield United
+    to: Fulham
+  - player: Joe Rodon
+    year: 2021
+    from: Swansea City
+    to: Tottenham Hotspur
+  - player: Adam Webster
+    year: 2019
+    from: Bristol
+    to: Brighton
+  - player: Alex Scott
+    year: 2023
+    from: Bristol
+    to: Bournemouth
+  - player: Said Benrahma
+    year: 2020
+    from: Brentford
+    to: West Ham
+  - player: Ollie Watkins
+    year: 2020
+    from: Brentford
+    to: Aston Villa
+  - player: Joao Pedro
+    year: 2023
+    from: Watford
+    to: Brighton
+  - player: Archie Gray
+    year: 2020
+    from: Watford
+    to: Brighton
+

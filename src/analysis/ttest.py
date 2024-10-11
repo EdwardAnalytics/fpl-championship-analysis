@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from scipy import stats
 
 
@@ -136,3 +137,185 @@ def perform_ttest_on_df(df, team_strength_threshold=5):
     """
     df_subset = create_subset(df, team_strength_threshold)
     return loop_combinations(df_subset)
+
+
+import pandas as pd
+import numpy as np
+
+
+def filter_by_sample_size(result_df, sample_size_threshold):
+    """
+    Filter the DataFrame based on sample size threshold.
+
+    Parameters
+    ----------
+    result_df : pd.DataFrame
+        The DataFrame containing player statistics.
+    sample_size_threshold : int
+        The minimum combined sample size for promoted and not promoted players.
+
+    Returns
+    -------
+    pd.DataFrame
+        Filtered DataFrame containing only rows that meet the sample size threshold.
+    """
+    return result_df[
+        result_df["sample_size_promoted"] + result_df["sample_size_not_promoted"]
+        >= sample_size_threshold
+    ]
+
+
+def add_statistical_columns(result_df):
+    """
+    Add statistically significant and difference columns to the DataFrame.
+
+    Parameters
+    ----------
+    result_df : pd.DataFrame
+        The DataFrame to be modified.
+
+    Returns
+    -------
+    pd.DataFrame
+        Modified DataFrame with added columns for significance and score difference.
+    """
+    result_df["statistically_significant"] = np.where(
+        result_df["p_value"] <= 0.05, "Yes", "No"
+    )
+    result_df["difference"] = (
+        result_df["average_score_promoted"] - result_df["average_score_not_promoted"]
+    )
+    return result_df
+
+
+def reorder_columns(result_df):
+    """
+    Reorder the columns in the DataFrame.
+
+    Parameters
+    ----------
+    result_df : pd.DataFrame
+        The DataFrame to be modified.
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame with columns reordered.
+    """
+    column_order = [
+        "position",
+        "value_first_gw",
+        "average_score_promoted",
+        "average_score_not_promoted",
+        "difference",
+        "statistically_significant",
+        "sample_size_promoted",
+        "sample_size_not_promoted",
+        "t_test",
+        "p_value",
+    ]
+    return result_df[column_order]
+
+
+def set_position_order(result_df):
+    """
+    Set custom categorical order for the position column and sort the DataFrame.
+
+    Parameters
+    ----------
+    result_df : pd.DataFrame
+        The DataFrame to be modified.
+
+    Returns
+    -------
+    pd.DataFrame
+        Sorted DataFrame based on position and value_first_gw.
+    """
+    position_order = ["GK", "DEF", "MID", "FWD"]
+    result_df["position"] = pd.Categorical(
+        result_df["position"], categories=position_order, ordered=True
+    )
+    return result_df.sort_values(["position", "value_first_gw"])
+
+
+def round_columns(result_df):
+    """
+    Round specific columns in the DataFrame to defined decimal places.
+
+    Parameters
+    ----------
+    result_df : pd.DataFrame
+        The DataFrame to be modified.
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame with specified columns rounded.
+    """
+    result_df["average_score_promoted"] = result_df["average_score_promoted"].round(1)
+    result_df["average_score_not_promoted"] = result_df[
+        "average_score_not_promoted"
+    ].round(1)
+    result_df["difference"] = result_df["difference"].round(1)
+    result_df["p_value"] = result_df["p_value"].round(3)
+    result_df["t_test"] = result_df["t_test"].round(2)
+    return result_df
+
+
+def rename_columns(result_df):
+    """
+    Rename specific columns in the DataFrame.
+
+    Parameters
+    ----------
+    result_df : pd.DataFrame
+        The DataFrame to be modified.
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame with renamed columns.
+    """
+    column_rename_dict = {
+        "position": "Position",
+        "value_first_gw": "Value",
+        "average_score_promoted": "Avg. Score Promoted",
+        "average_score_not_promoted": "Avg. Score Not Promoted",
+        "difference": "Difference",
+        "statistically_significant": "Statistically Significant",
+        "sample_size_promoted": "Num. Players Promoted",
+        "sample_size_not_promoted": "Num. Players Not Promoted",
+        "t_test": "T-Test",
+        "p_value": "P-Value",
+    }
+    return result_df.rename(columns=column_rename_dict)
+
+
+def format_result(result_df, sample_size_threshold=20, export_csv=False):
+    """
+    Format the result DataFrame by filtering, adding columns, sorting, rounding, and renaming.
+
+    Parameters
+    ----------
+    result_df : pd.DataFrame
+        The DataFrame containing player statistics to be formatted.
+    sample_size_threshold : int, optional
+        The minimum combined sample size for promoted and not promoted players (default is 20).
+
+    Returns
+    -------
+    pd.DataFrame
+        Formatted DataFrame ready for analysis and output.
+    """
+    result_df = filter_by_sample_size(result_df, sample_size_threshold)
+    result_df = add_statistical_columns(result_df)
+    result_df = reorder_columns(result_df)
+    result_df = set_position_order(result_df)
+    result_df = round_columns(result_df)
+    result_df = rename_columns(result_df)
+
+    if export_csv:
+        # Save to CSV
+        result_df.to_csv("data/analysis/welchs_ttest.csv", index=False)
+
+    return result_df
