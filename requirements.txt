@@ -1,2 +1,4 @@
-BeautifulSoup
-fuzzywuzzy
+beautifulsoup4==4.12.3
+fuzzywuzzy==0.18.0
+pandas==2.2.0
+scikit-learn==1.5.1
