@@ -97,6 +97,11 @@ def process_fpl_data(combined_df, promoted_teams_by_season):
 
     combined_df = combined_df.rename(columns=rename_columns)
 
+    # Concatenate 'Team' and 'Season' columns
+    combined_df["Team (Season)"] = (
+        combined_df["Team"] + " (" + combined_df["Season"] + ")"
+    )
+
     return combined_df
 
 

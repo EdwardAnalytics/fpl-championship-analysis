@@ -389,6 +389,9 @@ def format_dataframe(df, metric, export_csv=False):
     # Step 4: Remove rows where FPL Points is null
     df = remove_nulls(df, "FPL Points")
 
+    # Concatenate 'Name' and 'Season' columns
+    df["Player (FPL Season)"] = df["Player"] + " (" + df["FPL Season"] + ")"
+
     if export_csv:
         df.to_csv(
             f"data/analysis/{metric.lower()}_championship_fpl_points.csv", index=False
