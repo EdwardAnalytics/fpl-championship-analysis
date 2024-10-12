@@ -1,6 +1,6 @@
 import pandas as pd
 
-from src.analysis.championship_performance import (
+from src.analysis.championship_player_performance import (
     format_dataframe,
     get_top_ranked_players,
     match_and_merge_with_fpl_data,

@@ -368,6 +368,9 @@ def format_dataframe(df, metric, export_csv=False):
     ]
     df = reorder_columns(df, required_cols)
 
+    # Sort
+    df = df.sort_values(metric, ascending=False)
+
     # Step 2: Change the Championship Season format
     df = change_season_format(df)
 
