@@ -392,6 +392,11 @@ def format_dataframe(df, metric, export_csv=False):
     # Concatenate 'Name' and 'Season' columns
     df["Player (FPL Season)"] = df["Player"] + " (" + df["FPL Season"] + ")"
 
+    df["Player (FPL Season) - Short"] = (
+        df["Player"].apply(lambda x: " ".join(x.split(" ")[1:]))
+        + df["FPL Season"].str[-5:]
+    )
+
     if export_csv:
         df.to_csv(
             f"data/analysis/{metric.lower()}_championship_fpl_points.csv", index=False
