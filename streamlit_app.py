@@ -2,6 +2,14 @@ import streamlit as st
 import pandas as pd
 from src.tools.app_tools import top_players_fpl_data
 
+from src.tools.yaml_loader import load_yaml_file
+
+# Load parameters
+file_path = "conf/parameters.yaml"
+parameters = load_yaml_file(file_path)
+number_gameweeks_played_min = parameters["number_gameweeks_played_min"]
+minutes_played_gameweek_min = parameters["minutes_played_gameweek_min"]
+
 # Set the page configuration to wide mode
 st.set_page_config(layout="wide")
 
@@ -44,7 +52,12 @@ The following areas are looked into:
   * Championship goals and assists vs FPL Points in the following season
 """)
 st.divider()
-st.markdown("""#### Players from Promoted Teams vs Existing Teams""")
+st.markdown(f"""#### Players from Promoted Teams vs Existing Teams
+Note:
+ * This section only includes players who have played at least {minutes_played_gameweek_min} minutes in {number_gameweeks_played_min} games. 
+ * Cole Palmer's 2023/24 data has been removed as an anomoly. He was valued at £5.0m and got the most FPL Points out of all players that seaosn. This has minimal impact on the analysis.
+            """)
+
 st.divider()
 
 welchs_ttest_p = welchs_ttest[["Position", "Value", "Avg. Score Promoted"]]
@@ -81,6 +94,7 @@ st.bar_chart(
     width=800,
 )
 
+
 # Move 'Statistically Significant' to the front and reformat
 columns = ["Statistically Significant"] + [
     col for col in welchs_ttest.columns if col != "Statistically Significant"
@@ -98,6 +112,10 @@ st.text("")
 # Load 5.0 mid boxplot
 image_path = "assets/mid_50_boxplot.png"
 st.image(image_path, use_column_width=False)
+
+st.markdown(
+    f"""*Note: if Cole Palmer 23/24 was left in, the impact would have been even more significant*"""
+)
 
 
 st.divider()
