@@ -395,10 +395,11 @@ def format_dataframe(df, metric, export_csv=False):
     df["Player (FPL Season) - Short"] = (
         df["Player"].apply(lambda x: " ".join(x.split(" ")[1:]))
         + ": "
-        + df["FPL Season"].str[-5:].replace("-","/")
+        + df["FPL Season"].str[-5:].replace("-", "/")
     )
-    df["Player (FPL Season) - Short"]=df["Player (FPL Season) - Short"].str.replace('-', '/', regex=False)
-
+    df["Player (FPL Season) - Short"] = df["Player (FPL Season) - Short"].str.replace(
+        "-", "/", regex=False
+    )
 
     if export_csv:
         df.to_csv(
