@@ -104,8 +104,8 @@ st.text("")
 st.divider()
 key_findings = """
 ### Key Findings/TL;DR
-* Overall, there are limited significant performance differences between players from promoted teams and similarly priced or positioned players from established teams.
-* In general, it is best to avoid £5.0m midfielders from promoted teams at the start of the season; instead, consider options from other teams. This group shows a statistically significant difference in performance.
+* Overall, there are limited significant performance differences between players from promoted teams and similarly priced or positioned players from teams already in the league.
+* However, in general, it is best to avoid £5.0m midfielders from promoted teams at the start of the season; instead, consider options from other teams. This group shows a statistically significant difference in performance.
 * Players who score more goals in the championship do get more FPL points the first season after promotion with their team. However, this is reflected in the players' value, with high scorers costing more.
 *Note: This analysis focuses on the start of the season; some players, such as Buonanotte, may exceed expectations as the season progresses and become viable transfer options.*       
             """
