@@ -480,6 +480,7 @@ team_performance_fpl_points_cleaned = team_performance_fpl_points.drop(
 )
 st.dataframe(team_performance_fpl_points_cleaned, hide_index=True)
 st.text("")
+st.divider()
 st.markdown("""### Data Sources
             
 All data collection, processing and analysis code is in GitHub Repo here: [FPL-Championship-Analysis](https://github.com/EdwardAnalytics/fpl-championship-analysis)
