@@ -107,6 +107,7 @@ key_findings = """
 * Overall, there are limited significant performance differences between players from promoted teams and similarly priced or positioned players from teams already in the league.
 * However, in general, it is best to avoid £5.0m midfielders from promoted teams at the start of the season; instead, consider options from other teams. This group shows a statistically significant difference in performance.
 * Players who score more goals in the championship do get more FPL points the first season after promotion with their team. However, this is reflected in the players' value, with high scorers costing more.
+
 *Note: This analysis focuses on the start of the season; some players, such as Buonanotte, may exceed expectations as the season progresses and become viable transfer options.*       
             """
 st.markdown(key_findings)
@@ -115,7 +116,7 @@ st.divider()
 
 
 st.markdown(f"""### Players from Promoted Teams vs Existing Teams
-* This section includes only players who have played at least {minutes_played_gameweek_min} minutes in {number_gameweeks_played_min} games.
+* This section includes only players who have played at least {minutes_played_gameweek_min} minutes in at least {number_gameweeks_played_min} games.
 * "Value" refers to the player's value at the start of the season.
 * The analysis compares players from teams with a strength of 3 or below; similar results are observed when considering all team strengths.
 * Data is based on completed FPL seasons from 2016/17 to 2023/24.
