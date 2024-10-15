@@ -120,6 +120,7 @@ st.markdown(f"""### Players from Promoted Teams vs Existing Teams
 * "Value" refers to the player's value at the start of the season.
 * The analysis compares players from teams with a strength of 3 or below; similar results are observed when considering all team strengths.
 * Data is based on completed FPL seasons from 2016/17 to 2023/24.
+
 *Cole Palmer's data for the 2023/24 season has been excluded as an anomaly. He was valued at £5.0m and scored the most FPL points that season, but this exclusion has minimal impact on the overall analysis.*        """)
 st.text("")
 st.markdown("""
