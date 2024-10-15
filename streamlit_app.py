@@ -428,9 +428,6 @@ chart = base + other_text
 # Display the chart in Streamlit
 st.altair_chart(chart, use_container_width=False)
 st.text("")
-st.divider()
-st.markdown(key_findings)
-st.text("")
 
 st.divider()
 st.markdown("""#### Players from Promoted Teams by Total FPL Points""")
@@ -495,8 +492,11 @@ Data Sources:
 
 
             """)
-st.text("")
 
+
+st.text("")
+st.divider()
+st.markdown(key_findings)
 st.text("")
 st.divider()
 st.markdown("""### Notes and Caveats
