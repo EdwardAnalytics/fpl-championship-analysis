@@ -448,7 +448,7 @@ with col1:
 # Slider in the second column
 with col2:
     value_limit = st.slider(
-        "Filter by Player Value*",
+        "Filter by Player Value",
         min_value=0.0,
         max_value=10.0,
         value=(0.0, 10.0),
@@ -509,6 +509,7 @@ Other factors assessed:
 
 * Experimented with different thresholds for defining "games played" (e.g., minutes or gameweeks).
 * Built models to predict scores, aiming to determine if the "championship flag" was a significant feature. Results were similar to those from t-tests.
+
 Note: This analysis doesn't solely focus on players who played in the Championship the previous season. It also includes new signings from that season.
 
 We are only looking at players in teams that were promoted, not those joining from promoted teams. The latter can be influenced by the strength of the club they are moving to (e.g., when Tottenham signed Bale).
