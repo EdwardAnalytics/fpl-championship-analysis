@@ -2,7 +2,7 @@ import pandas as pd
 from src.analysis.championship_player_performance import get_top_ranked_players
 
 
-def top_players_fpl_data(df, filter_position, top_n):
+def top_players_fpl_data(df, filter_position, filter_value_first_gw, top_n):
     """
     Filter FPL data by player position and return the top ranked players based on total points,
     with renamed columns and calculated points per game.
@@ -37,6 +37,12 @@ def top_players_fpl_data(df, filter_position, top_n):
             & (df["promoted_from_championship"] == 1)
         ]
 
+    # Filter by the value range selected using the slider
+    df_filtered = df_filtered[
+        (df_filtered["value_first_gw"] >= 10 * filter_value_first_gw[0])
+        & (df_filtered["value_first_gw"] <= 10 * filter_value_first_gw[1])
+    ]
+
     # Get top N ranked players by total points
     df_filtered = get_top_ranked_players(
         df=df_filtered, metric="total_points", top_n=top_n
@@ -53,11 +59,13 @@ def top_players_fpl_data(df, filter_position, top_n):
             "total_points",
             "position",
             "team",
+            "value_first_gw",
             "total_points_per_38",
             "goals_scored",
             "assists",
             "saves",
             "goals_conceded",
+            "minutes_played",
         ]
     ]
 
@@ -67,11 +75,13 @@ def top_players_fpl_data(df, filter_position, top_n):
         "position": "Position",
         "season": "Season",
         "team": "Team",
+        "value_first_gw": "Value",
         "total_points": "Total Points",
-        "total_points_per_38": "Total Points per Game",
+        "total_points_per_38": "Avg. Points per Game*",
         "goals_scored": "Goals",
         "assists": "Assists",
         "goals_conceded": "Goals Conceded",
+        "minutes_played": "Minutes Played",
     }
 
     # Rename columns

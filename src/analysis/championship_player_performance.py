@@ -217,6 +217,7 @@ def merge_dataframes(season_goals_df, fpl_season_data):
                 "goals_scored",
                 "assists",
                 "position",
+                "value_first_gw",
             ]
         ],
         how="left",
@@ -365,6 +366,7 @@ def format_dataframe(df, metric, export_csv=False):
         "total_points",
         "goals_scored",
         "assists",
+        "value_first_gw",
     ]
     df = reorder_columns(df, required_cols)
 
@@ -383,6 +385,7 @@ def format_dataframe(df, metric, export_csv=False):
         "total_points": "FPL Points",
         "goals_scored": "FPL Goals",
         "assists": "FPL Assists",
+        "value_first_gw": "FPL Value",
     }
     df = rename_columns(df, rename_dict)
 
