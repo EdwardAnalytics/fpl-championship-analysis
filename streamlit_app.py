@@ -84,7 +84,7 @@ At the start of every season, I like to identify standout players from newly pro
 
 I've often wondered if there's any statistical difference between these players and those from teams already established in the Premier League.
 
-This analysis investigates that question by examining the FPL performance of players from Championship teams in their first Premier League season. The following areas are explored:
+This analysis investigates that question by examining the FPL performance of players from Championship teams in their first Premier League season after being promoted. The following areas are explored:
 
 * Comparison of players from promoted teams vs. established Premier League teams:
   * Average total points in a season by position and value
