@@ -248,8 +248,10 @@ base = (
         y="FPL Points",
         tooltip=[
             "Player (FPL Season)",
+            "Position",
             "Championship Goals",
             "FPL Points",
+            "FPL Value",
         ],  # Tooltips for all points
     )
 )
@@ -289,7 +291,7 @@ toney_text = (
         dx=-10,  # Move Toney's label to the left
         dy=-5,  # Vertical offset
         fontSize=12,
-        color="white",
+        color="#767679",
     )
     .encode(x="Championship Goals", y="FPL Points", text="Player (FPL Season) - Short")
 )
@@ -304,7 +306,7 @@ other_text = (
         dx=10,  # Move labels to the right
         dy=-5,  # Vertical offset
         fontSize=12,
-        color="white",
+        color="#767679",
     )
     .encode(x="Championship Goals", y="FPL Points", text="Player (FPL Season) - Short")
 )
@@ -380,8 +382,10 @@ base = (
         y="FPL Points",
         tooltip=[
             "Player (FPL Season)",
+            "Position",
             "Championship Assists",
             "FPL Points",
+            "FPL Value",
         ],  # Tooltips for all points
     )
 )
@@ -410,7 +414,7 @@ other_text = (
         dx=10,  # Move labels to the right
         dy=-5,  # Vertical offset
         fontSize=12,
-        color="white",
+        color="#767679",
     )
     .encode(
         x="Championship Assists", y="FPL Points", text="Player (FPL Season) - Short"
