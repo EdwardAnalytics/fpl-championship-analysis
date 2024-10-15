@@ -91,10 +91,10 @@ This analysis investigates that question by examining the FPL performance of pla
   * Statistical significance testing (t-test)
   * £5.0m Midfielders total points disbutrion
 * Exploratory data analysis:
-  * Top players from promoted teams by total FPL points
-  * Promoted teams by total FPL points
   * Comparison of FPL points with Championship goals and assists from the previous season
   * Forwards: Championship Goals vs. FPL points vs. FPL Value
+  * Top players from promoted teams by total FPL points
+  * Promoted teams by total FPL points
 * Data collection methodology
 * Key findings/TL;DR
 * Notes and caveats
@@ -213,57 +213,6 @@ st.text("")
 
 st.divider()
 st.markdown("""### Exploratory Data Analysis""")
-
-st.markdown("""#### Players from Promoted Teams by Total FPL Points""")
-st.text("")
-
-
-# Create two columns: one for the dropdown and one for the slider
-col1, col2 = st.columns([1, 1])
-
-# Dropdown in the first column
-with col1:
-    position = st.selectbox(
-        "Filter by Position", ["All", "GK", "DEF", "MID", "FWD"], index=0
-    )
-
-# Slider in the second column
-with col2:
-    value_limit = st.slider(
-        "Filter by Player Value*",
-        min_value=0.0,
-        max_value=10.0,
-        value=(0.0, 10.0),
-        step=0.1,
-        format="£%.1f",
-    )
-
-# Filter your data with the selected position and value limit
-fpl_data_filtered = top_players_fpl_data(
-    df=fpl_data, filter_position=position, top_n=1000, filter_value_first_gw=value_limit
-)
-
-# Display filtered data
-st.dataframe(fpl_data_filtered, hide_index=True)
-
-st.markdown("""
-**Average points per game is the total points, divided by 38 (the number of gameweeks), not the average for games played.*
-""")
-
-
-st.text("")
-
-st.markdown("""#### Promoted Teams by Total FPL Points
-This shows the total FPL points for each team during their first season after promotion. It shows the sum of all players' points within each team across the season.            
-            """)
-st.text("")
-
-# Display table
-team_performance_fpl_points_cleaned = team_performance_fpl_points.drop(
-    columns=["Team (Season)"]
-)
-st.dataframe(team_performance_fpl_points_cleaned, hide_index=True)
-st.text("")
 
 st.markdown("""#### Comparing FPL points with Championship Goals from the Previous Season
 This illustrates the goal scorers from the Championship in teams that were subsequently promoted. It compares the players' FPL points in the season following their promotion. Notably, it highlights Bamford's impressive performance in Leeds' first season after promotion, during which he scored 17 goals between his frothy coffees.
@@ -476,6 +425,60 @@ chart = base + other_text
 st.altair_chart(chart, use_container_width=False)
 st.text("")
 st.divider()
+st.markdown(key_findings)
+st.text("")
+
+st.divider()
+st.markdown("""#### Players from Promoted Teams by Total FPL Points""")
+st.text("")
+
+
+# Create two columns: one for the dropdown and one for the slider
+col1, col2 = st.columns([1, 1])
+
+# Dropdown in the first column
+with col1:
+    position = st.selectbox(
+        "Filter by Position", ["All", "GK", "DEF", "MID", "FWD"], index=0
+    )
+
+# Slider in the second column
+with col2:
+    value_limit = st.slider(
+        "Filter by Player Value*",
+        min_value=0.0,
+        max_value=10.0,
+        value=(0.0, 10.0),
+        step=0.1,
+        format="£%.1f",
+    )
+
+# Filter your data with the selected position and value limit
+fpl_data_filtered = top_players_fpl_data(
+    df=fpl_data, filter_position=position, top_n=1000, filter_value_first_gw=value_limit
+)
+
+# Display filtered data
+st.dataframe(fpl_data_filtered, hide_index=True)
+
+st.markdown("""
+**Average points per game is the total points, divided by 38 (the number of gameweeks), not the average for games played.*
+""")
+
+
+st.text("")
+
+st.markdown("""#### Promoted Teams by Total FPL Points
+This shows the total FPL points for each team during their first season after promotion. It shows the sum of all players' points within each team across the season.            
+            """)
+st.text("")
+
+# Display table
+team_performance_fpl_points_cleaned = team_performance_fpl_points.drop(
+    columns=["Team (Season)"]
+)
+st.dataframe(team_performance_fpl_points_cleaned, hide_index=True)
+st.text("")
 st.markdown("""### Data Sources
             
 All data collection, processing and analysis code is in GitHub Repo here: [FPL-Championship-Analysis](https://github.com/EdwardAnalytics/fpl-championship-analysis)
@@ -488,10 +491,6 @@ Data Sources:
 
 
             """)
-st.text("")
-
-st.divider()
-st.markdown(key_findings)
 st.text("")
 
 st.text("")
