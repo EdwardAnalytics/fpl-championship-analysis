@@ -30,7 +30,7 @@ assists_championship_fpl_points = pd.read_csv(
 team_performance_fpl_points = pd.read_csv(
     "data/analysis/team_performance_fpl_points.csv"
 )
-welchs_ttest = pd.read_csv("data/analysis/welchs_ttest.csv")
+welchs_ttest = pd.read_csv("data/analysis/test_welchs_ttest.csv")
 
 st.title("FPL Championship Analysis")
 
