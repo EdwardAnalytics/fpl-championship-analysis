@@ -1,5 +1,5 @@
 from src.data_prep.join_data import load_combine_fpl_data
-from src.analysis.ttest import perform_ttest_on_df, format_result
+from src.analysis.stats_tests import perform_test_on_df, format_result
 
 from src.tools.yaml_loader import load_yaml_file
 
@@ -30,10 +30,21 @@ df = df.drop(df[(df["name"] == "Cole Palmer") & (df["season"] == "2023-24")].ind
 
 # Perform t-tests
 team_strength_threshold = 3
-result_df = perform_ttest_on_df(df, team_strength_threshold=team_strength_threshold)
+df_t_test, df_mwu = perform_test_on_df(
+    df, team_strength_threshold=team_strength_threshold
+)
 
 # Sample size filter
 sample_size_threshold = 20
-result_df = format_result(
-    result_df=result_df, sample_size_threshold=sample_size_threshold, export_csv=True
+df_t_test = format_result(
+    result_df=df_t_test,
+    sample_size_threshold=sample_size_threshold,
+    export_csv=True,
+    file_name="test_welchs_ttest",
+)
+df_mwu = format_result(
+    result_df=df_mwu,
+    sample_size_threshold=sample_size_threshold,
+    export_csv=True,
+    file_name="test_mw_u_test",
 )

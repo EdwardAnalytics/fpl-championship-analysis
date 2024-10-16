@@ -43,7 +43,7 @@ def filter_data(df, position, value):
     return df[(df["position"] == position) & (df["value_first_gw"] == value)]
 
 
-def perform_ttest(filtered_df):
+def perform_test(filtered_df, test_type):
     """
     Perform a t-test on the filtered DataFrame to compare total points of promoted vs non-promoted teams.
 
@@ -73,15 +73,18 @@ def perform_ttest(filtered_df):
         sample_size_promoted = len(group1)
         sample_size_not_promoted = len(group2)
 
-        # Perform independent t-test (Welch's t-test)
-        t_stat, p_value = stats.ttest_ind(group1, group2, equal_var=False)
+        # Perform independent test
+        if test_type == "t_test":
+            stat, p_value = stats.ttest_ind(group1, group2, equal_var=False)
+        elif test_type == "mwu":
+            stat, p_value = stats.mannwhitneyu(group1, group2)
 
         return {
             "sample_size_promoted": sample_size_promoted,
             "sample_size_not_promoted": sample_size_not_promoted,
             "average_score_promoted": avg_promoted,
             "average_score_not_promoted": avg_not_promoted,
-            "t_test": t_stat,
+            "test_stat": stat,
             "p_value": p_value,
         }
     else:
@@ -102,7 +105,8 @@ def loop_combinations(df):
     pandas.DataFrame
         A DataFrame containing t-test results and statistics for each position and value combination.
     """
-    results = []
+    results_t = []
+    results_mwu = []
 
     unique_positions = df["position"].unique()
     unique_values = df["value_first_gw"].unique()
@@ -110,16 +114,21 @@ def loop_combinations(df):
     for position in unique_positions:
         for value in unique_values:
             filtered_df = filter_data(df, position, value)
-            result = perform_ttest(filtered_df)
+            result_t = perform_test(filtered_df, test_type="t_test")
+            result_mwu = perform_test(filtered_df, test_type="mwu")
 
-            if result:  # Only append if there is valid t-test data
-                result.update({"position": position, "value_first_gw": value})
-                results.append(result)
+            if result_t:  # Only append if there is valid t-test data
+                result_t.update({"position": position, "value_first_gw": value})
+                results_t.append(result_t)
 
-    return pd.DataFrame(results)
+            if result_mwu:  # Only append if there is valid t-test data
+                result_mwu.update({"position": position, "value_first_gw": value})
+                results_mwu.append(result_mwu)
+
+    return pd.DataFrame(results_t), pd.DataFrame(results_mwu)
 
 
-def perform_ttest_on_df(df, team_strength_threshold=5):
+def perform_test_on_df(df, team_strength_threshold=5):
     """
     Perform t-tests on the subset of the DataFrame based on team strength threshold.
 
@@ -211,7 +220,7 @@ def reorder_columns(result_df):
         "statistically_significant",
         "sample_size_promoted",
         "sample_size_not_promoted",
-        "t_test",
+        "test_stat",
         "p_value",
     ]
     return result_df[column_order]
@@ -258,7 +267,7 @@ def round_columns(result_df):
     ].round(1)
     result_df["difference"] = result_df["difference"].round(1)
     result_df["p_value"] = result_df["p_value"].round(3)
-    result_df["t_test"] = result_df["t_test"].round(2)
+    result_df["test_stat"] = result_df["test_stat"].round(2)
     return result_df
 
 
@@ -285,13 +294,13 @@ def rename_columns(result_df):
         "statistically_significant": "Statistically Significant",
         "sample_size_promoted": "Num. Players Promoted",
         "sample_size_not_promoted": "Num. Players Not Promoted",
-        "t_test": "T-Test",
+        "test_stat": "Test Statistic",
         "p_value": "P-Value",
     }
     return result_df.rename(columns=column_rename_dict)
 
 
-def format_result(result_df, sample_size_threshold=20, export_csv=False):
+def format_result(result_df, sample_size_threshold=20, export_csv=False, file_name=""):
     """
     Format the result DataFrame by filtering, adding columns, sorting, rounding, and renaming.
 
@@ -316,6 +325,6 @@ def format_result(result_df, sample_size_threshold=20, export_csv=False):
 
     if export_csv:
         # Save to CSV
-        result_df.to_csv("data/analysis/welchs_ttest.csv", index=False)
+        result_df.to_csv(f"data/analysis/{file_name}.csv", index=False)
 
     return result_df

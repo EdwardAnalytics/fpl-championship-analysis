@@ -1,0 +1,11 @@
+Position,Value,Avg. Score Promoted,Avg. Score Not Promoted,Difference,Statistically Significant,Num. Players Promoted,Num. Players Not Promoted,Test Statistic,P-Value
+GK,45,115.2,112.7,2.5,No,19,38,383.0,0.716
+DEF,45,81.1,80.3,0.8,No,73,161,5852.5,0.961
+DEF,50,82.2,88.4,-6.2,No,6,98,249.5,0.54
+MID,45,81.0,76.4,4.6,No,17,37,355.0,0.456
+MID,50,78.0,86.5,-8.6,No,24,90,867.0,0.14
+MID,55,97.2,100.1,-2.9,No,24,81,898.0,0.575
+MID,60,109.0,110.0,-1.0,No,7,43,138.0,0.737
+MID,65,116.5,125.9,-9.4,No,2,30,25.5,0.755
+FWD,60,108.9,118.1,-9.2,No,8,18,61.5,0.578
+FWD,65,121.6,119.3,2.2,No,7,18,68.0,0.785

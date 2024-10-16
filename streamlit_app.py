@@ -89,7 +89,7 @@ This analysis investigates that question by examining the FPL performance of pla
 * Comparison of players from promoted teams vs. established Premier League teams:
   * Average total points in a season by position and value
   * Statistical significance testing (t-test)
-  * £5.0m Midfielders total points disbutrion
+  * £5.0m Midfielders total points distribution
 * Exploratory data analysis:
   * Comparison of FPL points with Championship goals and assists from the previous season
   * Forwards: Championship Goals vs. FPL points vs. FPL Value
@@ -196,7 +196,7 @@ st.dataframe(
 )
 st.text("")
 st.markdown("""
-#### £5.0m Midfielders Total Points Disbutrion
+#### £5.0m Midfielders Total Points Distribution
 The chart below shows the spread and skewness of the total points across a season for midfielders valued at £5.0m at the start of the season. This is the only statistically significant group.
 
 Overall, players from promoted teams tend to have lower total points, as indicated by lower median and quartile values. However, players from teams that were not promoted show more variability in their total points distribution, with a wider range and the presence of outliers (even with Cole Palmer removed).
