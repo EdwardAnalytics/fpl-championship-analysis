@@ -347,6 +347,8 @@ st.image(image_path, use_column_width=False)
 st.text("")
 st.markdown("""
 Again, here we can see for forwards, as FPL Value increases, FPL Points increases, along with championship goals the previous season.
+
+In other words, as would be expected, their price is set depending on their goals scored the previous season.
             """)
 
 st.dataframe(average_stats, hide_index=True)
