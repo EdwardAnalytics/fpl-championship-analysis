@@ -191,12 +191,14 @@ welchs_ttest = welchs_ttest.reindex(columns=columns)
 welchs_ttest["Statistically Significant"] = welchs_ttest[
     "Statistically Significant"
 ].replace("Yes", "Yes (at 0.05)*")
-st.markdown("""**whilst the p-value is below a 0.05 threshold, we are making [multiple comparisons](https://en.wikipedia.org/wiki/Multiple_comparisons_problem) so the signficiance threshold will be lower*""")
-
 st.dataframe(
     welchs_ttest,
     hide_index=True,
 )
+st.markdown(
+    """**whilst the p-value is below a 0.05 threshold, we are making [multiple comparisons](https://en.wikipedia.org/wiki/Multiple_comparisons_problem) so the signficiance threshold will be lower*"""
+)
+
 st.text("")
 st.markdown("""
 #### £5.0m Midfielders Total Points Distribution
