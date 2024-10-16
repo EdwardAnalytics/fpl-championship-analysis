@@ -104,8 +104,8 @@ st.text("")
 st.divider()
 key_findings = """
 ### Key Findings/TL;DR
-* Overall, there are limited significant performance differences between players from promoted teams and similarly priced or positioned players from teams already in the league.
-* However, in general, it is best to avoid £5.0m midfielders from promoted teams at the start of the season; instead, consider options from other teams. This group shows a statistically significant difference in performance.
+* Overall, there are no significant performance differences between players from promoted teams and similarly priced or positioned players from teams already in the league.
+* However, midfielders priced at £5.0m from promoted teams seem to underperform compared to those from non-promoted teams. However, this difference is not statistically significant at this time. A larger sample size and more time will be needed to confirm this trend.
 * Players who score more goals in the championship do get more FPL points the first season after promotion with their team. However, this is reflected in the players' value, with high scorers costing more.
 
 *Note: This analysis focuses on the start of the season; some players, such as Buonanotte, may exceed expectations as the season progresses and become viable transfer options.*       
@@ -125,7 +125,7 @@ st.markdown(f"""### Players from Promoted Teams vs Existing Teams
 st.text("")
 st.markdown("""
 #### Average Total Points in a Season by Position and Value
-The graph below illustrates the differences in FPL scores between players from promoted and non-promoted teams across various positions and values. The only statistically significant difference is observed among midfielders valued at £5.0m, where players in non promoted teams score, on average, 8.6 points higher than players in promoted teams (P = 0.049).
+The graph below illustrates the differences in FPL scores between players from promoted and non-promoted teams across various positions and values. Note, that due to the low sample sizes, there are no statistically significant differences.
 """)
 
 
@@ -167,7 +167,10 @@ st.markdown("""
 #### Testing Statistical Significance
 The table below illustrates the differences between players from promoted and non-promoted teams across various positions and values.
             
-This analysis shows that £5.0m midfielders are the only statistically significant group. While there are differences across various groups, these are not statistically significant. Therefore, it is advisable to avoid £5.0m midfielders from promoted teams in favour of players from non-promoted teams. Additionally, the promotion status of a club does not significantly impact player selection at other values and positions.
+This Midfielders priced at £5.0m from promoted teams seem to underperform most compared to those from non-promoted teams. However, this difference is not statistically significant at this time. A larger sample size and more time will be needed to confirm this trend.
+While there are differences across various other groups, these are not statistically significant. 
+
+In other words, the promotion status of a club does not significantly impact player selection at other values and positions.
 
 A statistical test, specifically Welch's t-test, has been conducted to identify which differences are statistically significant.
 
@@ -187,8 +190,8 @@ columns = ["Statistically Significant"] + [
 welchs_ttest = welchs_ttest.reindex(columns=columns)
 welchs_ttest["Statistically Significant"] = welchs_ttest[
     "Statistically Significant"
-].replace("Yes", "Yes ⭐")
-
+].replace("Yes", "Yes (at 0.05)*")
+st.markdown("""**whilst the p-value is below a 0.05 threshold, we are making [multiple comparisons](https://en.wikipedia.org/wiki/Multiple_comparisons_problem) so the signficiance threshold will be lower*""")
 
 st.dataframe(
     welchs_ttest,
@@ -197,7 +200,7 @@ st.dataframe(
 st.text("")
 st.markdown("""
 #### £5.0m Midfielders Total Points Distribution
-The chart below shows the spread and skewness of the total points across a season for midfielders valued at £5.0m at the start of the season. This is the only statistically significant group.
+The chart below shows the spread and skewness of the total points across a season for midfielders valued at £5.0m at the start of the season.
 
 Overall, players from promoted teams tend to have lower total points, as indicated by lower median and quartile values. However, players from teams that were not promoted show more variability in their total points distribution, with a wider range and the presence of outliers (even with Cole Palmer removed).
             """)
@@ -510,8 +513,8 @@ st.markdown("""### Notes and Caveats
 Other factors assessed:
 
 * Experimented with different thresholds for defining "games played" (e.g., minutes or gameweeks).
-* Built models to predict scores, aiming to determine if the "championship flag" was a significant feature. Results were similar to those from t-tests.
-
+* Developed models to predict scores, focusing on whether the 'championship flag' was a significant feature. The results showed it was significant both on its own and when combined with player value. However, further breakdown by team strength was not feasible due to sample size limitations.
+            
 Note: This analysis doesn't solely focus on players who played in the Championship the previous season. It also includes new signings from that season.
 
 We are only looking at players in teams that were promoted, not those joining from promoted teams. The latter can be influenced by the strength of the club they are moving to (e.g., when Tottenham signed Bale).
