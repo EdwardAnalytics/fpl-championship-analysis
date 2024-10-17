@@ -24,6 +24,7 @@ df = load_combine_fpl_data(season_years=season_years, export_csv=True)
 
 # Filter to only players who have played more than the specified
 df = df[df["count_gws_min_minutes"] >= number_gameweeks_played_min]
+df = df[df["min_gw"]==1]
 
 # Drop Cole Palmer anomoly season
 df = df.drop(df[(df["name"] == "Cole Palmer") & (df["season"] == "2023-24")].index)

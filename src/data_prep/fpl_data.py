@@ -84,9 +84,6 @@ def process_fpl_data(df, season_year):
     # Identify players present in Gameweek 1
     players_gw1 = df[df["GW"] == 1]["name"].unique()
 
-    # Filter the main DataFrame for players who were in Gameweek 1
-    df = df[df["name"].isin(players_gw1)]
-
     # Filter for gameweeks where minutes > minutes_played_gameweek_min and calculate count
     count_df = (
         df[df["minutes"] > minutes_played_gameweek_min]
@@ -112,6 +109,7 @@ def process_fpl_data(df, season_year):
             saves=("saves", "sum"),
             bonus_points=("bonus", "sum"),
             minutes_played=("minutes", "sum"),
+            min_gw=("GW", "min") 
         )
         .reset_index()
     )
@@ -156,6 +154,7 @@ def process_fpl_data(df, season_year):
         "value_first_gw",
         "count_gws_min_minutes",
         "minutes_played",
+        "min_gw"
     ]
 
     # Reorder the DataFrame columns
