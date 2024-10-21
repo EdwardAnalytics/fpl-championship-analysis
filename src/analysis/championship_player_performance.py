@@ -1,30 +1,12 @@
 import pandas as pd
 from fuzzywuzzy import process, fuzz
 
-# Create a mapping of actual team names to the ones used in the promotion dictionary
-team_name_mapping = {
-    "Burnley FC": "Burnley",
-    "Fulham FC": "Fulham",
-    "Hull City": "Hull",
-    "Brighton & Hove Albion": "Brighton",
-    "Huddersfield Town": "Huddersfield",
-    "Middlesbrough FC": "Middlesbrough",
-    "Wolverhampton Wanderers": "Wolves",
-    "Sheffield United": "Sheffield Utd",
-    "Leeds United": "Leeds",
-    "Watford FC": "Watford",
-    "Brentford FC": "Brentford",
-    "Cardiff City": "Cardiff",
-    "Ipswich Town": "Ipswich",
-    "Nottingham Forest": "Nott'm Forest",
-    "Newcastle United": "Newcastle",
-    "Norwich City": "Norwich",
-    "Luton Town": "Luton",
-    "Leicester City": "Leicester",
-    "AFC Bournemouth": "Bournemouth",
-    "Southampton FC": "Southampton",
-    "West Bromwich Albion": "West Brom",
-}
+from src.tools.yaml_loader import load_yaml_file
+
+
+# Load mapping of actual team names to the ones used in the promotion dictionary
+file_path = "conf/team_name_mapping.yaml"
+team_name_mapping = load_yaml_file(file_path)
 
 
 def check_promoted_next_season(row, promoted_teams_by_season):
