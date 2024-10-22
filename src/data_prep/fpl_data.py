@@ -109,7 +109,7 @@ def process_fpl_data(df, season_year):
             saves=("saves", "sum"),
             bonus_points=("bonus", "sum"),
             minutes_played=("minutes", "sum"),
-            min_gw=("GW", "min") 
+            min_gw=("GW", "min"),
         )
         .reset_index()
     )
@@ -154,7 +154,7 @@ def process_fpl_data(df, season_year):
         "value_first_gw",
         "count_gws_min_minutes",
         "minutes_played",
-        "min_gw"
+        "min_gw",
     ]
 
     # Reorder the DataFrame columns
